@@ -1,0 +1,15 @@
+﻿<anonymous_script>:1
+You are making too many requests to the API.
+^
+System.Management.Automation.RemoteException
+SyntaxError: Unexpected token 'Y', "You are ma"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async ii (file:///C:/Users/adamp/OneDrive/Documents/festivo-web/[eval1]:12:11)
+    at async file:///C:/Users/adamp/OneDrive/Documents/festivo-web/[eval1]:36:11
+System.Management.Automation.RemoteException
+Node.js v22.22.0

@@ -1,0 +1,90 @@
+{
+  "generatedAt": "2026-06-05T19:59:43.252Z",
+  "resolved": [
+    {
+      "id": "braderie-de-lille",
+      "title": "File:Braderie de Lille",
+      "source": "wikipedia"
+    },
+    {
+      "id": "coachella",
+      "title": "File:Coachella Valley Music and Arts Festival",
+      "source": "wikipedia"
+    },
+    {
+      "id": "el-colacho",
+      "title": "File:Baby jumping",
+      "source": "wikipedia"
+    },
+    {
+      "id": "electric-castle-festival",
+      "title": "File:Electric Castle",
+      "source": "wikipedia"
+    },
+    {
+      "id": "feast-of-st-george-victoria-gozo",
+      "title": "File:Victoria, Gozo",
+      "source": "wikipedia"
+    },
+    {
+      "id": "lajkonik-parade",
+      "title": "File:Lajkonik",
+      "source": "wikipedia"
+    },
+    {
+      "id": "luminara-di-san-ranieri",
+      "title": "File:Pisa, luminara di san ranieri, 2022, lungarno gambacorti, santa maria della spina 03.jpg",
+      "source": "search:Luminara di San Ranieri Pisa",
+      "score": 7
+    },
+    {
+      "id": "santos-populares-lisbon",
+      "title": "File:Street decorations up for Santos Populares (Popular Saints Festival) in Lisbon, Portugal (55181046951).jpg",
+      "source": "search:Santos Populares Lisbon Portugal",
+      "score": 11
+    }
+  ],
+  "stillFailed": [
+    "bohemian-carnevale",
+    "feast-of-st-paul-s-shipwreck",
+    "festa-della-sensa",
+    "festa-frawli",
+    "festa-san-filep-zebbug-gozo",
+    "fetes-de-bayonne",
+    "fiesta-de-san-isidro",
+    "fire-festivals-of-the-pyrenees",
+    "flow-festival-helsinki",
+    "hay-festival-hay-on-wye",
+    "hogmanay",
+    "holi-festival-mathura",
+    "holy-week-braga",
+    "isle-of-man-tt",
+    "isle-of-mtv-malta",
+    "la-tomatina",
+    "maastricht-carnival",
+    "malta-international-fireworks-festival",
+    "mardi-gras-new-orleans",
+    "mosta-assumption-feast",
+    "nadur-carnival-gozo",
+    "olsok-trondheim",
+    "ommegang-festival",
+    "perchtenlauf-salzburg",
+    "pierogi-festival",
+    "pukkelpop",
+    "regata-storica",
+    "romaria-de-viana-do-castelo",
+    "romeria-del-rocio",
+    "saint-lucia-festival",
+    "santa-marija-feast-victoria-gozo",
+    "scarlet-sails",
+    "schaferlauf-markgroningen",
+    "songkran",
+    "st-dominic-s-fair",
+    "tbilisoba",
+    "thorrablot-reykjavik",
+    "umbria-jazz-festival",
+    "untold-festival",
+    "valkenburg-christmas-markets",
+    "viareggio-carnival"
+  ]
+}

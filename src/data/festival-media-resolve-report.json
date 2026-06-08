@@ -1,0 +1,260 @@
+{
+  "generatedAt": "2026-06-05T20:11:04.483Z",
+  "resolved": 14,
+  "failed": 35,
+  "skipped": 0,
+  "stillUsingUnsplash": 35,
+  "details": {
+    "resolved": [
+      {
+        "id": "braderie-de-lille",
+        "source": "wikipedia",
+        "title": "Braderie de Lille"
+      },
+      {
+        "id": "coachella",
+        "source": "override",
+        "title": "File:Lucent Dossier's Jen Shields at Coachella Festival - Strings GUMU6503.jpg"
+      },
+      {
+        "id": "el-colacho",
+        "source": "override",
+        "title": "File:El Colacho.jpg"
+      },
+      {
+        "id": "electric-castle-festival",
+        "source": "wikipedia",
+        "title": "Electric Castle"
+      },
+      {
+        "id": "fetes-de-bayonne",
+        "source": "commons:Fetes de Bayonne Bayonne",
+        "title": "File:Fetes de Bayonne 2015.jpg"
+      },
+      {
+        "id": "fiesta-de-san-isidro",
+        "source": "commons:Fiesta de San Isidro Madrid",
+        "title": "File:Parque de San Isidro - Fiesta de San Isidro 2026 - Madrid 04.jpg"
+      },
+      {
+        "id": "nadur-carnival-gozo",
+        "source": "wikipedia",
+        "title": "Nadur"
+      },
+      {
+        "id": "olsok-trondheim",
+        "source": "wikipedia",
+        "title": "Olsok"
+      },
+      {
+        "id": "ommegang-festival",
+        "source": "wikipedia",
+        "title": "Ommegang"
+      },
+      {
+        "id": "perchtenlauf-salzburg",
+        "source": "wikipedia",
+        "title": "Perchten"
+      },
+      {
+        "id": "pierogi-festival",
+        "source": "wikipedia",
+        "title": "Pierogi"
+      },
+      {
+        "id": "untold-festival",
+        "source": "wikipedia",
+        "title": "Untold Festival"
+      },
+      {
+        "id": "valkenburg-christmas-markets",
+        "source": "wikipedia",
+        "title": "Valkenburg aan de Geul"
+      },
+      {
+        "id": "viareggio-carnival",
+        "source": "wikipedia",
+        "title": "Carnival of Viareggio"
+      }
+    ],
+    "failed": [
+      {
+        "id": "bohemian-carnevale",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "feast-of-st-george-victoria-gozo",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "feast-of-st-paul-s-shipwreck",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "festa-della-sensa",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "festa-frawli",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "festa-san-filep-zebbug-gozo",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "fire-festivals-of-the-pyrenees",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "flow-festival-helsinki",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "hay-festival-hay-on-wye",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "hogmanay",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "holi-festival-mathura",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "holy-week-braga",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "isle-of-man-tt",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "isle-of-mtv-malta",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "la-tomatina",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "lajkonik-parade",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "luminara-di-san-ranieri",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "maastricht-carnival",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "malta-international-fireworks-festival",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "mardi-gras-new-orleans",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "mosta-assumption-feast",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "pukkelpop",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "regata-storica",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "romaria-de-viana-do-castelo",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "romeria-del-rocio",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "saint-lucia-festival",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "santa-marija-feast-victoria-gozo",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "santos-populares-lisbon",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "scarlet-sails",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "schaferlauf-markgroningen",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "songkran",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "st-dominic-s-fair",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "tbilisoba",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "thorrablot-reykjavik",
+        "reason": "no Wikimedia match"
+      },
+      {
+        "id": "umbria-jazz-festival",
+        "reason": "no Wikimedia match"
+      }
+    ],
+    "stillStock": [
+      "bohemian-carnevale",
+      "feast-of-st-george-victoria-gozo",
+      "feast-of-st-paul-s-shipwreck",
+      "festa-della-sensa",
+      "festa-frawli",
+      "festa-san-filep-zebbug-gozo",
+      "fire-festivals-of-the-pyrenees",
+      "flow-festival-helsinki",
+      "hay-festival-hay-on-wye",
+      "hogmanay",
+      "holi-festival-mathura",
+      "holy-week-braga",
+      "isle-of-man-tt",
+      "isle-of-mtv-malta",
+      "la-tomatina",
+      "lajkonik-parade",
+      "luminara-di-san-ranieri",
+      "maastricht-carnival",
+      "malta-international-fireworks-festival",
+      "mardi-gras-new-orleans",
+      "mosta-assumption-feast",
+      "pukkelpop",
+      "regata-storica",
+      "romaria-de-viana-do-castelo",
+      "romeria-del-rocio",
+      "saint-lucia-festival",
+      "santa-marija-feast-victoria-gozo",
+      "santos-populares-lisbon",
+      "scarlet-sails",
+      "schaferlauf-markgroningen",
+      "songkran",
+      "st-dominic-s-fair",
+      "tbilisoba",
+      "thorrablot-reykjavik",
+      "umbria-jazz-festival"
+    ]
+  }
+}

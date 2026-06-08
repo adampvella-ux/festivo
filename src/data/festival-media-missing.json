@@ -1,0 +1,9 @@
+{
+  "generatedAt": "2026-05-09T23:46:35.292Z",
+  "note": "Festivals listed here have no row in festival-media.generated.ts and no festival-media-manual.ts override—the UI still falls back to the Unsplash placeholder URL from the catalog until you add media.",
+  "totalCatalog": 209,
+  "generatedMediaKeys": 209,
+  "manualOverrideKeys": 4,
+  "missingCount": 0,
+  "missing": []
+}
