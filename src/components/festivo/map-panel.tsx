@@ -95,7 +95,6 @@ export function MapPanel({
     const boot = async () => {
       try {
         const mapboxgl = (await import("mapbox-gl")).default;
-        await import("mapbox-gl/dist/mapbox-gl.css");
         mapboxRef.current = await import("mapbox-gl");
 
         if (cancelled || !containerRef.current) return;
