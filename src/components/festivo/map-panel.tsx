@@ -297,7 +297,7 @@ export function MapPanel({
       }
       setMapReady(false);
     };
-  }, [token]);
+  }, []);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -309,7 +309,7 @@ export function MapPanel({
       src.setData(geo);
     }
     requestAnimationFrame(() => map.resize());
-  }, [festivals, selectedId, mapReady, token]);
+  }, [festivals, selectedId, mapReady]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -324,7 +324,7 @@ export function MapPanel({
       new mapboxgl.LngLatBounds(coords[0], coords[0])
     );
     map.fitBounds(bounds, { padding: 72, maxZoom: 5.8, duration: 900 });
-  }, [dataKey, mapReady, festivals.length]);
+  }, [dataKey, mapReady, festivals]);
 
   useEffect(() => {
     const map = mapRef.current;

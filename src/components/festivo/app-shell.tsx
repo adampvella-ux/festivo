@@ -46,10 +46,15 @@ const types: FestivalType[] = [
   "cultural_heritage"
 ];
 
+const CATALOG_SEASON_START = "2026-01-01";
+const CATALOG_SEASON_END = "2026-12-31";
+
 const defaultFilters: FestivoFilters = {
   continent: "any",
   eventType: "any",
-  datePreset: "next_90",
+  datePreset: "custom",
+  customRangeStart: CATALOG_SEASON_START,
+  customRangeEnd: CATALOG_SEASON_END,
   lenses: [defaultLens],
   bestForTag: "any"
 };
@@ -201,6 +206,13 @@ export function AppShell() {
     () => Array.from(new Set(festivals.map((festival) => festival.continent))).sort(),
     []
   );
+  const continentCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const festival of festivals) {
+      counts.set(festival.continent, (counts.get(festival.continent) ?? 0) + 1);
+    }
+    return counts;
+  }, []);
 
   function toggleSaved(id: string) {
     saved.setValue(toggle(saved.value, id));
@@ -301,7 +313,7 @@ export function AppShell() {
                   <option value="any">Any region</option>
                   {continents.map((continent) => (
                     <option key={continent} value={continent}>
-                      {continent}
+                      {continent} ({continentCounts.get(continent) ?? 0})
                     </option>
                   ))}
                 </select>
@@ -791,7 +803,7 @@ function FestivalDetailDialog({
   const [slideIndex, setSlideIndex] = useState(0);
   const canStep = slides.length > 1;
 
-  const tagline = useMemo(() => festivalTagline(festival), [festival.id]);
+  const tagline = useMemo(() => festivalTagline(festival), [festival]);
 
   const activeSlide = slides[slideIndex] ?? slides[0];
 

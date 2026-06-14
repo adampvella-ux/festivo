@@ -2,12 +2,14 @@
 
 import type { FestivoFilters } from "@/types/festival";
 
+export const CATALOG_SEASON = { start: "2026-01-01", end: "2026-12-31" } as const;
+
 export const TIME_WINDOW_PRESETS: { id: FestivoFilters["datePreset"]; label: string }[] = [
+  { id: "custom", label: "2026 season" },
   { id: "next_30", label: "30 days" },
   { id: "next_60", label: "60 days" },
   { id: "next_90", label: "90 days" },
-  { id: "any", label: "Any date" },
-  { id: "custom", label: "Custom" }
+  { id: "any", label: "Any date" }
 ];
 
 function localYmd(d = new Date()) {
@@ -30,9 +32,22 @@ type Props = {
 };
 
 export function TimeWindowFilter({ filters, onChange }: Props) {
-  const isCustom = filters.datePreset === "custom";
+  const isCatalogSeason =
+    filters.datePreset === "custom" &&
+    filters.customRangeStart === CATALOG_SEASON.start &&
+    filters.customRangeEnd === CATALOG_SEASON.end;
+  const isCustom = filters.datePreset === "custom" && !isCatalogSeason;
 
   function selectPreset(id: FestivoFilters["datePreset"]) {
+    if (id === "custom" && TIME_WINDOW_PRESETS[0]?.label === "2026 season") {
+      onChange({
+        ...filters,
+        datePreset: "custom",
+        customRangeStart: CATALOG_SEASON.start,
+        customRangeEnd: CATALOG_SEASON.end
+      });
+      return;
+    }
     if (id === "custom") {
       onChange({
         ...filters,
@@ -50,11 +65,11 @@ export function TimeWindowFilter({ filters, onChange }: Props) {
       <div className="flex flex-wrap gap-2">
         {TIME_WINDOW_PRESETS.map(({ id, label }) => (
           <button
-            key={id}
+            key={id === "custom" && label === "2026 season" ? "catalog-season" : id}
             type="button"
             onClick={() => selectPreset(id)}
             className={`rounded-full border px-3.5 py-1.5 text-sm transition ${
-              filters.datePreset === id
+              (id === "custom" && label === "2026 season" ? isCatalogSeason : filters.datePreset === id)
                 ? "border-cyan-400/50 bg-cyan-500/15 text-cyan-100"
                 : "border-slate-600/80 bg-slate-950/40 text-slate-300 hover:border-slate-500 hover:bg-slate-900/60"
             }`}
@@ -62,6 +77,24 @@ export function TimeWindowFilter({ filters, onChange }: Props) {
             {label}
           </button>
         ))}
+        <button
+          type="button"
+          onClick={() =>
+            onChange({
+              ...filters,
+              datePreset: "custom",
+              customRangeStart: filters.customRangeStart ?? localYmd(),
+              customRangeEnd: filters.customRangeEnd ?? addDaysFromYmd(filters.customRangeStart ?? localYmd(), 90)
+            })
+          }
+          className={`rounded-full border px-3.5 py-1.5 text-sm transition ${
+            isCustom
+              ? "border-cyan-400/50 bg-cyan-500/15 text-cyan-100"
+              : "border-slate-600/80 bg-slate-950/40 text-slate-300 hover:border-slate-500 hover:bg-slate-900/60"
+          }`}
+        >
+          Custom
+        </button>
       </div>
 
       {isCustom ? (
@@ -109,6 +142,13 @@ export function TimeWindowFilter({ filters, onChange }: Props) {
 }
 
 export function formatTimeWindowCriteria(filters: FestivoFilters): string {
+  if (
+    filters.datePreset === "custom" &&
+    filters.customRangeStart === CATALOG_SEASON.start &&
+    filters.customRangeEnd === CATALOG_SEASON.end
+  ) {
+    return "2026 season";
+  }
   if (filters.datePreset === "custom" && filters.customRangeStart && filters.customRangeEnd) {
     return `Custom · ${filters.customRangeStart} → ${filters.customRangeEnd}`;
   }

@@ -37,6 +37,15 @@ const CORE_SLUGS = new Set([
   "diwali-jaipur"
 ]);
 
+/** CSV duplicates — canonical slug is kept elsewhere in the catalog. */
+const DUPLICATE_SLUGS = new Set([
+  "battle-of-oranges",
+  "cheese-rolling-cooper",
+  "day-of-dead-oaxaca",
+  "kirkpinar-oil-wrestling",
+  "up-helly-aa-lerwick"
+]);
+
 const EVENT_TYPE_MAP: Record<string, FestivalType> = {
   sports: "cultural_heritage",
   religious: "religious_spiritual"
@@ -200,7 +209,10 @@ function emitFestival(festival: Festival, indent = "  ") {
 
 const csv = readFileSync(csvPath, "utf8");
 const lines = csv.trim().split(/\r?\n/).slice(1);
-const festivals = lines.map(parseCsvLine).map(festivalFromRow);
+const festivals = lines
+  .map(parseCsvLine)
+  .map(festivalFromRow)
+  .filter((f) => !DUPLICATE_SLUGS.has(f.slug));
 
 festivals.sort((a, b) => a.name.localeCompare(b.name));
 
